@@ -1,0 +1,48 @@
+:root{
+/* base neutrals — black-on-white, dark by default */
+--black:#000000;
+--gray-950:#0a0a0a;
+--gray-900:#121212;
+--gray-800:#1c1c1e;
+--gray-700:#2c2c2e;
+--gray-600:#3f3f42;
+--gray-500:#6b6b6e;
+--gray-400:#8e8e92;
+--gray-300:#b4b4b7;
+--gray-200:#d4d4d6;
+--gray-100:#e8e8ea;
+--white:#ffffff;
+/* accents — punchy against black */
+--violet-500:#7c4dff;
+--violet-400:#9b74ff;
+--violet-600:#5e2fe0;
+--green-500:#2ee6a6;
+--green-400:#5cf0bd;
+--green-600:#1cbd85;
+/* semantic */
+--red-500:#ff5c5c;
+--amber-500:#ffb84d;
+/* surfaces */
+--surface-0:var(--black);
+--surface-1:var(--gray-950);
+--surface-2:var(--gray-900);
+--surface-3:var(--gray-800);
+--border-subtle:rgba(255,255,255,.08);
+--border-default:rgba(255,255,255,.14);
+--border-strong:rgba(255,255,255,.24);
+/* text */
+--text-primary:var(--white);
+--text-secondary:var(--gray-400);
+--text-tertiary:var(--gray-500);
+--text-disabled:var(--gray-600);
+--text-on-accent:var(--black);
+/* accent semantic aliases */
+--accent-primary:var(--violet-500);
+--accent-primary-hover:var(--violet-400);
+--accent-primary-active:var(--violet-600);
+--accent-secondary:var(--green-500);
+--color-success:var(--green-500);
+--color-error:var(--red-500);
+--color-warning:var(--amber-500);
+--focus-ring:var(--violet-400);
+}

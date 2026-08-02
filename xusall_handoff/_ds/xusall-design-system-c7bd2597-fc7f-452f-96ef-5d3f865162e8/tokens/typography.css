@@ -1,0 +1,26 @@
+:root{
+--font-display:"Helvetica Neue",Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+--font-body:"Helvetica Neue",Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+--font-mono:ui-monospace,"SF Mono",Menlo,monospace;
+--text-2xs:11px;
+--text-xs:12px;
+--text-sm:13px;
+--text-md:15px;
+--text-lg:17px;
+--text-xl:20px;
+--text-2xl:26px;
+--text-3xl:34px;
+--text-4xl:46px;
+--text-5xl:64px;
+--text-6xl:88px;
+--leading-tight:1.1;
+--leading-snug:1.25;
+--leading-normal:1.5;
+--tracking-tight:-0.03em;
+--tracking-tighter:-0.045em;
+--tracking-normal:0;
+--tracking-wide:0.06em;
+--weight-regular:400;
+--weight-medium:500;
+--weight-bold:700;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/base.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/styles.css">
+  <script src="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/_ds_bundle.js"></script>
+  <style>
+    html { background: #000000; scroll-behavior: smooth; }
+    body { margin: 0; background: #000000; color: #F5F6F8; font-family: "Helvetica Neue", Arial, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #F5F6F8; text-decoration: none; }
+    a:hover { color: #FFFFFF; }
+    a:focus-visible { outline: 1px solid #F5F6F8; outline-offset: 4px; border-radius: 2px; }
+    ::selection { background: #F5F6F8; color: #000000; }
+    @keyframes xus-spectrum { from { transform: translate3d(0,0,0); } to { transform: translate3d(-66.666%,0,0); } }
+    @keyframes xus-xgrad { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+    @media (max-width: 640px) { [data-navlinks] { display: none !important; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [data-xgrad] { animation: none !important; } [data-spectrum] { animation: none !important; transform: none !important; } }
+  </style>
+</helmet>
+
+<!-- PRODUCT URLS — single source of truth. TODO: drop Play Store links into the two empty strings at release.
+     XUsDemocracy: https://democracy.xusall.com
+     XUsNotes:     https://notes.xusall.com
+     XUsCurrency:  ""   (Android, in testing)
+     XUsContacts:  ""   (iPhone, in testing) -->
+
+<div style="background:#000000; min-height:100vh; overflow-x:hidden">
+
+  <div style="position:fixed; top:0; left:0; right:0; height:1px; z-index:2147483647; overflow:hidden; pointer-events:none">
+    <div data-spectrum="" style="width:300%; height:1px; background:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D); animation:xus-spectrum 60s linear infinite; will-change:transform"></div>
+  </div>
+
+  <header data-header="" style="position:fixed; top:1px; left:0; right:0; z-index:100; background:transparent; border-bottom:1px solid transparent; transition:background 200ms cubic-bezier(0.4,0,0.2,1), border-color 200ms cubic-bezier(0.4,0,0.2,1), backdrop-filter 200ms cubic-bezier(0.4,0,0.2,1)">
+    <div style="width:100%; padding:0 clamp(20px,3vw,40px); height:64px; display:flex; align-items:center; justify-content:space-between">
+      <a href="#top" style="font-size:17px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">XUsAll</a>
+      <nav data-navlinks="" style="display:flex; align-items:center; gap:32px">
+        <a href="#products" style="font-size:14px; font-weight:400; color:#9BA1AC; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">Products</a>
+        <a href="#philosophy" style="font-size:14px; font-weight:400; color:#9BA1AC; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">Philosophy</a>
+        <a href="#contact" style="font-size:14px; font-weight:400; color:#9BA1AC; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" style="max-width:1120px; margin:0 auto; padding:0 clamp(24px,5vw,48px)">
+
+    <section style="min-height:80vh; display:flex; flex-direction:column; justify-content:center; padding:calc(64px + clamp(80px,14vh,150px)) 0 clamp(80px,12vh,120px)">
+      <sc-if value="{{ isVariable }}" hint-placeholder-val="{{ true }}">
+        <div data-reveal="">
+          <h1 style="white-space:nowrap; margin:0; text-align:center; font-size:clamp(64px,15vw,184px); font-weight:500; letter-spacing:-0.045em; line-height:0.95; color:#F5F6F8"><span data-xgrad="" style="display:inline-block; padding:0.1em 0.1em 0.16em; margin:-0.1em -0.1em -0.16em; background-image:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D); background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; animation:xus-xgrad 28s linear infinite">X</span>UsAll</h1>
+          <p style="margin:clamp(28px,3.4vw,40px) auto 0; max-width:34ch; text-align:center; font-size:clamp(24px,3vw,38px); font-weight:500; letter-spacing:-0.03em; line-height:1.15; color:#F5F6F8">Connection. People. Progress.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isThreeBeat }}" hint-placeholder-val="{{ false }}">
+        <div data-reveal="">
+          <h1 style="margin:0; font-size:clamp(44px,8vw,96px); font-weight:500; letter-spacing:-0.035em; line-height:1.05; color:#F5F6F8">Connection.<br>People.<br>Progress.</h1>
+          <p style="margin:clamp(20px,3vw,28px) 0 0; max-width:34ch; font-size:clamp(19px,2.2vw,26px); font-weight:400; letter-spacing:-0.015em; line-height:1.35; color:#9BA1AC">X is a variable. It primarily stands for connect.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isInternet }}" hint-placeholder-val="{{ false }}">
+        <div data-reveal="">
+          <h1 style="margin:0; max-width:22ch; font-size:clamp(40px,6.6vw,78px); font-weight:500; letter-spacing:-0.03em; line-height:1.08; color:#F5F6F8">The internet was built to connect us. We build like that's still true.</h1>
+          <p style="margin:clamp(20px,3vw,28px) 0 0; max-width:34ch; font-size:clamp(19px,2.2vw,26px); font-weight:400; letter-spacing:-0.015em; line-height:1.35; color:#9BA1AC">X is a variable. It primarily stands for connect.</p>
+        </div>
+      </sc-if>
+
+      <p data-reveal="" style="margin:clamp(40px,6vw,64px) auto 0; max-width:60ch; text-align:center; font-size:16px; font-weight:400; line-height:1.7; color:#7C8492; text-wrap:pretty">
+        X is a variable. It primarily stands for <span style="color:#F5F6F8; font-weight:500">connect</span>, and for everything digital connection makes possible.
+      </p>
+
+      <div data-reveal="" style="margin-top:clamp(32px,5vw,48px); display:flex; justify-content:center">
+        <a href="#products" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; letter-spacing:-0.01em; color:#9BA1AC; transition:color 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">See what we've built</a>
+      </div>
+    </section>
+
+    <section id="products" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(80px,11vw,150px) 0">
+      <div data-reveal="" style="display:flex; flex-direction:column; gap:16px; margin-bottom:clamp(48px,6vw,72px)">
+        <h2 style="margin:0; font-size:clamp(28px,3.6vw,46px); font-weight:500; letter-spacing:-0.03em; line-height:1.1; color:#F5F6F8">Products</h2>
+        <p style="margin:0; max-width:50ch; font-size:clamp(17px,1.8vw,20px); font-weight:400; letter-spacing:-0.01em; line-height:1.5; color:#9BA1AC">Four things, so far. All free.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px">
+
+        <a data-reveal="" href="https://democracy.xusall.com" target="_blank" rel="noopener noreferrer" style="display:flex; flex-direction:column; gap:20px; background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); transition:background 200ms cubic-bezier(0.4,0,0.2,1), border-color 200ms cubic-bezier(0.4,0,0.2,1), transform 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:#101319; border-color:rgba(255,255,255,0.16); transform:translateY(-2px)">
+          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
+            <span style="font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8"><span style="color:#FF4D6D">X</span>Us<span style="color:#38BDF8">Democracy</span></span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4ADE80; border:1px solid rgba(74,222,128,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#4ADE80"></span>Live</span>
+          </div>
+          <p style="margin:0; max-width:46ch; font-size:16px; font-weight:400; line-height:1.6; color:#9BA1AC; text-wrap:pretty">Know who represents you. Your elected officials, your upcoming elections, your registration deadline. Nonpartisan, and your address is never stored.</p>
+          <div style="margin-top:auto; padding-top:12px; display:flex; align-items:baseline; justify-content:space-between; gap:16px">
+            <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Web</span>
+            <span style="font-size:14px; font-weight:500; color:#F5F6F8">democracy.xusall.com <span style="color:#9BA1AC">↗</span></span>
+          </div>
+        </a>
+
+        <a data-reveal="" href="https://notes.xusall.com" target="_blank" rel="noopener noreferrer" style="display:flex; flex-direction:column; gap:20px; background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); transition:background 200ms cubic-bezier(0.4,0,0.2,1), border-color 200ms cubic-bezier(0.4,0,0.2,1), transform 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:#101319; border-color:rgba(255,255,255,0.16); transform:translateY(-2px)">
+          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
+            <span style="font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8"><span style="color:#A78BFA">X</span>Us<span style="color:#A78BFA">Notes</span></span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4ADE80; border:1px solid rgba(74,222,128,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#4ADE80"></span>Live</span>
+          </div>
+          <p style="margin:0; max-width:46ch; font-size:16px; font-weight:400; line-height:1.6; color:#9BA1AC; text-wrap:pretty">A fast, private scratchpad that lives in your browser. Nothing uploaded, nothing synced, nothing seen.</p>
+          <div style="margin-top:auto; padding-top:12px; display:flex; align-items:baseline; justify-content:space-between; gap:16px">
+            <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Web</span>
+            <span style="font-size:14px; font-weight:500; color:#F5F6F8">notes.xusall.com <span style="color:#9BA1AC">↗</span></span>
+          </div>
+        </a>
+
+        <div data-reveal="" style="display:flex; flex-direction:column; gap:20px; background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px)">
+          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
+            <span style="font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8"><span style="color:#4ADE80">X</span>Us<span style="color:#FFD93D">Currency</span></span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#FFB74D; border:1px solid rgba(255,183,77,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#FFB74D"></span>In development</span>
+          </div>
+          <p style="margin:0; max-width:46ch; font-size:16px; font-weight:400; line-height:1.6; color:#9BA1AC; opacity:0.86; text-wrap:pretty">Currency conversion and everyday money math, made plain. No ads, no accounts, no premium tier.</p>
+          <div style="margin-top:auto; padding-top:12px; display:flex; flex-direction:column; gap:10px">
+            <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Android</span>
+            <span style="font-size:14px; font-weight:400; line-height:1.5; color:#7C8492">Currently in testing. Link goes here at release.</span>
+          </div>
+        </div>
+
+        <div data-reveal="" style="display:flex; flex-direction:column; gap:20px; background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px)">
+          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
+            <span style="font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">XUsContacts</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#FFB74D; border:1px solid rgba(255,183,77,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#FFB74D"></span>In development</span>
+          </div>
+          <p style="margin:0; max-width:46ch; font-size:16px; font-weight:400; line-height:1.6; color:#9BA1AC; opacity:0.86; text-wrap:pretty">Contact management that treats your address book as yours. It stays on your phone.</p>
+          <div style="margin-top:auto; padding-top:12px; display:flex; flex-direction:column; gap:10px">
+            <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">iPhone</span>
+            <span style="font-size:14px; font-weight:400; line-height:1.5; color:#7C8492">Currently in development. Link goes here at release.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="philosophy" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(80px,11vw,150px) 0">
+      <div data-reveal="" style="display:flex; flex-direction:column; gap:16px; margin-bottom:clamp(40px,5vw,56px)">
+        <h2 style="margin:0; font-size:clamp(28px,3.6vw,46px); font-weight:500; letter-spacing:-0.03em; line-height:1.1; color:#F5F6F8">Philosophy</h2>
+      </div>
+
+      <p data-reveal="" style="margin:0 0 clamp(56px,7vw,88px); max-width:60ch; font-size:clamp(19px,2.1vw,24px); font-weight:400; letter-spacing:-0.015em; line-height:1.55; color:#9BA1AC; text-wrap:pretty">
+        Most software is built to extract something from you. Your attention, your data, your money, usually all three. It doesn't have to work that way. <span style="color:#F5F6F8">XUsAll builds tools that are simply useful and accessible to everyone.</span> The internet is the most powerful instrument we've ever had for helping one another. We'd like to use it that way.
+      </p>
+
+      <div style="display:flex; flex-direction:column">
+        <div data-reveal="" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(28px,3.4vw,40px) 0; border-top:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:clamp(17px,1.9vw,21px); font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">People over profits.</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; font-weight:400; line-height:1.65; color:#9BA1AC; text-wrap:pretty">You are not the product. The point is to help people, not to extract from them. Everything is free or low cost, and accessible to anyone we can reach.</p>
+        </div>
+        <div data-reveal="" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(28px,3.4vw,40px) 0; border-top:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:clamp(17px,1.9vw,21px); font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">Private and transparent by default.</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; font-weight:400; line-height:1.65; color:#9BA1AC; text-wrap:pretty">Your information stays yours. Ours stays open: how the apps are built, how data is handled, where any money goes. Privacy on your end, transparency on ours.</p>
+        </div>
+        <div data-reveal="" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(28px,3.4vw,40px) 0; border-top:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:clamp(17px,1.9vw,21px); font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">Built with AI, openly.</h3>
+          <div style="display:flex; flex-direction:column; gap:16px; align-items:flex-start">
+            <p style="margin:0; max-width:56ch; font-size:16px; font-weight:400; line-height:1.65; color:#9BA1AC; text-wrap:pretty">Every product here was made by one person working with AI tools. That is worth saying out loud. AI is an equalizer for knowledge and for creation, and the barrier to building what you want is practically gone. What is left is whether you care enough to build it.</p>
+            <a href="XUsAll How We Build.dc.html" style="font-size:15px; font-weight:500; letter-spacing:-0.01em; color:#F5F6F8; padding-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.16); transition:border-color 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="border-color:#F5F6F8">Read our full workflow</a>
+          </div>
+        </div>
+        <div data-reveal="" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(28px,3.4vw,40px) 0; border-top:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:clamp(17px,1.9vw,21px); font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">Simple, because we trust your intelligence.</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; font-weight:400; line-height:1.65; color:#9BA1AC; text-wrap:pretty">Clean, minimal, quietly modern. Nothing over-explained, nothing built to hold your attention. Just room to think and act with clarity.</p>
+        </div>
+        <div data-reveal="" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(28px,3.4vw,40px) 0; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:clamp(17px,1.9vw,21px); font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">Democratic where it counts.</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; font-weight:400; line-height:1.65; color:#9BA1AC; text-wrap:pretty">The people who use a service every day should have a say in how it works. Not shareholders, not a board seat, not whoever paid the most to sit at the table.</p>
+        </div>
+      </div>
+
+      <div data-reveal="" style="margin-top:clamp(72px,9vw,120px); max-width:26ch">
+        <div style="height:1px; background:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA); opacity:0.7"></div>
+      </div>
+      <blockquote data-reveal="" style="margin:clamp(28px,3.5vw,40px) 0 0; max-width:36ch; font-size:clamp(26px,4vw,44px); font-weight:400; letter-spacing:-0.03em; line-height:1.18; color:#F5F6F8; text-wrap:pretty">
+        X is a variable. It can stand for anything. Connect, empower, inspire. The opportunities are limitless. <span style="color: rgb(124, 132, 146);">That's the whole idea.</span>
+      </blockquote>
+    </section>
+
+    <section id="contact" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(80px,11vw,150px) 0">
+      <div data-reveal="" style="display:flex; flex-direction:column; gap:clamp(24px,3vw,32px)">
+        <h2 style="margin:0; font-size:clamp(28px,3.6vw,46px); font-weight:500; letter-spacing:-0.03em; line-height:1.1; color:#F5F6F8">Contact</h2>
+        <p style="margin:0; max-width:46ch; font-size:clamp(18px,2vw,22px); font-weight:400; letter-spacing:-0.015em; line-height:1.45; color:#9BA1AC">Questions, ideas, or something we should build? Write to us.</p>
+        <a href="mailto:xusalldevelopment@gmail.com" style="align-self:flex-start; font-size:clamp(22px,3.6vw,42px); font-weight:500; letter-spacing:-0.03em; line-height:1.1; color:#F5F6F8; word-break:break-word; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.16); transition:border-color 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="border-color:#F5F6F8">xusalldevelopment@gmail.com</a>
+        <sc-if value="{{ showTipLine }}" hint-placeholder-val="{{ true }}">
+          <p style="margin:clamp(8px,1.5vw,16px) 0 0; font-size:14px; font-weight:400; color:#7C8492">Free first. Funded by tips and a vision.</p>
+        </sc-if>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="max-width:1120px; margin:0 auto; padding:40px clamp(24px,5vw,48px) 56px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:24px 40px">
+      <span style="font-size:13px; font-weight:400; color:#7C8492">© 2026 XUsAll</span>
+      <nav style="display:flex; flex-wrap:wrap; gap:12px 24px">
+        <a href="https://democracy.xusall.com" target="_blank" rel="noopener noreferrer" style="font-size:13px; font-weight:400; color:#7C8492; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">XUsDemocracy</a>
+        <a href="https://notes.xusall.com" target="_blank" rel="noopener noreferrer" style="font-size:13px; font-weight:400; color:#7C8492; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">XUsNotes</a>
+        <span style="font-size:13px; font-weight:400; color:#7C8492">XUsCurrency</span>
+        <span style="font-size:13px; font-weight:400; color:#7C8492">XUsContacts</span>
+        <a href="XUsAll How We Build.dc.html" style="font-size:13px; font-weight:400; color:#7C8492; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">How we build</a>
+      </nav>
+      <a href="mailto:xusalldevelopment@gmail.com" style="font-size:13px; font-weight:400; color:#7C8492; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">xusalldevelopment@gmail.com</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroHeadline&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;XUsAll&quot;,&quot;Connection. People. Progress.&quot;,&quot;The internet was built to connect us&quot;],&quot;default&quot;:&quot;XUsAll&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;spectrumSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:60,&quot;min&quot;:20,&quot;max&quot;:180,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showTipLine&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const v = this.props.heroHeadline ?? "XUsAll";
+    return {
+      isVariable: v === "XUsAll",
+      isThreeBeat: v === "Connection. People. Progress.",
+      isInternet: v === "The internet was built to connect us",
+      showTipLine: this.props.showTipLine ?? true
+    };
+  }
+
+  componentDidMount() {
+    this.applySpeed();
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const header = document.querySelector("[data-header]");
+    const onScroll = () => {
+      if (!header) return;
+      const on = window.scrollY > 80;
+      header.style.background = on ? "rgba(0,0,0,0.72)" : "transparent";
+      header.style.backdropFilter = on ? "blur(12px)" : "none";
+      header.style.webkitBackdropFilter = on ? "blur(12px)" : "none";
+      header.style.borderBottomColor = on ? "rgba(255,255,255,0.08)" : "transparent";
+    };
+    this._onScroll = onScroll;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    if (reduce || !("IntersectionObserver" in window)) return;
+    const els = Array.from(document.querySelectorAll("[data-reveal]"));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.style.opacity = "1";
+        e.target.style.transform = "none";
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    els.forEach((el, i) => {
+      el.style.transition = "opacity 420ms cubic-bezier(0.4,0,0.2,1) " + Math.min(i % 4, 3) * 60 + "ms, transform 420ms cubic-bezier(0.4,0,0.2,1) " + Math.min(i % 4, 3) * 60 + "ms";
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) { el.style.opacity = "1"; return; }
+      el.style.opacity = "0";
+      el.style.transform = "translateY(14px)";
+      io.observe(el);
+    });
+    this._io = io;
+  }
+
+  componentDidUpdate() { this.applySpeed(); }
+
+  applySpeed() {
+    const bar = document.querySelector("[data-spectrum]");
+    if (bar) bar.style.animationDuration = Math.max(20, this.props.spectrumSeconds ?? 60) + "s";
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener("scroll", this._onScroll);
+    if (this._io) this._io.disconnect();
+  }
+}
+</script>
+</body>
+</html>

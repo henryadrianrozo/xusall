@@ -1,0 +1,5 @@
+*{box-sizing:border-box}
+body{background:var(--surface-0);color:var(--text-primary);font-family:var(--font-body);margin:0}
+a{color:var(--accent-primary)}
+a:hover{color:var(--accent-primary-hover)}
+::selection{background:var(--accent-primary);color:var(--text-on-accent)}

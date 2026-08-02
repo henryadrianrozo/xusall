@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/tokens/base.css">
+  <link rel="stylesheet" href="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/styles.css">
+  <script src="_ds/xusall-design-system-c7bd2597-fc7f-452f-96ef-5d3f865162e8/_ds_bundle.js"></script>
+  <style>
+    html { background: #000000; scroll-behavior: smooth; }
+    body { margin: 0; background: #000000; color: #F5F6F8; font-family: "Helvetica Neue", Arial, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #F5F6F8; text-decoration: none; }
+    a:hover { color: #FFFFFF; }
+    a:focus-visible { outline: 1px solid #F5F6F8; outline-offset: 4px; border-radius: 2px; }
+    ::selection { background: #F5F6F8; color: #000000; }
+    @keyframes xus-spectrum { from { transform: translate3d(0,0,0); } to { transform: translate3d(-66.666%,0,0); } }
+    @keyframes xus-xgrad { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } [data-xgrad] { animation: none !important; } [data-spectrum] { animation: none !important; transform: none !important; } }
+  </style>
+</helmet>
+
+<div style="background:#000000; min-height:100vh; overflow-x:hidden">
+
+  <div style="position:fixed; top:0; left:0; right:0; height:1px; z-index:2147483647; overflow:hidden; pointer-events:none">
+    <div data-spectrum style="width:300%; height:1px; background:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D); animation:xus-spectrum 60s linear infinite; will-change:transform"></div>
+  </div>
+
+  <main style="max-width:1120px; margin:0 auto; padding:0 clamp(24px,5vw,48px)">
+
+    <header style="padding:clamp(96px,16vh,180px) 0 clamp(64px,9vw,120px)">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Design system, v1</span>
+      <h1 style="white-space:nowrap; margin:clamp(20px,3vw,28px) 0 0; font-size:clamp(48px,10vw,120px); font-weight:500; letter-spacing:-0.045em; line-height:0.95; color:#F5F6F8"><span data-xgrad style="display:inline-block; padding:0.1em 0.1em 0.16em; margin:-0.1em -0.1em -0.16em; background-image:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D); background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; animation:xus-xgrad 28s linear infinite">X</span>UsAll</h1>
+      <p style="margin:clamp(24px,3vw,32px) 0 0; max-width:58ch; font-size:clamp(18px,2vw,22px); font-weight:400; letter-spacing:-0.015em; line-height:1.55; color:#9BA1AC; text-wrap:pretty">The rules every XUsAll property is built from. One canvas, one typeface, one spectrum. Everything here exists because it earns its place. If a decision isn't in this document, default to doing less.</p>
+      <nav style="margin-top:clamp(40px,5vw,56px); display:flex; flex-wrap:wrap; gap:12px 28px">
+        <a href="#brand" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Brand</a>
+        <a href="#color" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Color</a>
+        <a href="#type" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Type</a>
+        <a href="#space" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Space</a>
+        <a href="#components" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Components</a>
+        <a href="#motion" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Motion</a>
+        <a href="#voice" style="font-size:14px; color:#9BA1AC" style-hover="color:#F5F6F8">Voice</a>
+      </nav>
+    </header>
+
+    <section id="brand" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Brand</span>
+      <div style="margin-top:clamp(32px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px">
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:20px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Wordmark</span>
+          <span style="font-size:clamp(34px,5vw,52px); font-weight:500; letter-spacing:-0.04em; line-height:1; color:#F5F6F8">XUsAll</span>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AC; text-wrap:pretty">Set in the system typeface at 500, tracking -0.04em. There is no logomark and none should be drawn. Child products extend the same construction: XUsDemocracy, XUsNotes, XUsCurrency, XUsContacts.</p>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:20px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">X is a variable</span>
+          <span style="font-size:clamp(20px,2.4vw,26px); font-weight:400; letter-spacing:-0.02em; line-height:1.35; color:#F5F6F8">Connect. Empower. Support. Teach. Protect.</span>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AC; text-wrap:pretty">The X is the open slot. Some verb, applied to us, applied to all. The spectrum is the visual form of that variable: the full range of what X can be, and of the people it is for.</p>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:20px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Product marks</span>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">
+            <span><span style="color:#FF4D6D">X</span>Us<span style="color:#38BDF8">Democracy</span></span>
+            <span><span style="color:#A78BFA">X</span>Us<span style="color:#A78BFA">Notes</span></span>
+            <span><span style="color:#4ADE80">X</span>Us<span style="color:#FFD93D">Currency</span></span>
+            <span>XUsContacts</span>
+          </div>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AC; text-wrap:pretty">Each product takes one or two colors from the spectrum. Us always stays white. Colors are drawn from the palette below, never invented.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="color" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Color</span>
+      <p style="margin:clamp(20px,2.4vw,28px) 0 clamp(40px,5vw,56px); max-width:60ch; font-size:17px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">Dark only. There is no light theme and no theme toggle. True black is the canvas; near-black is the only elevation. There is no single brand accent. The accent is the spectrum, and it appears at most three times on any page.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px">
+        <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden">
+          <div style="height:96px; background:#000000"></div>
+          <div style="padding:16px 18px; display:flex; flex-direction:column; gap:4px; border-top:1px solid rgba(255,255,255,0.08)"><span style="font-size:14px; font-weight:500; color:#F5F6F8">--bg</span><span style="font-size:13px; color:#7C8492">#000000 &middot; page canvas</span></div>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden">
+          <div style="height:96px; background:#0A0C10"></div>
+          <div style="padding:16px 18px; display:flex; flex-direction:column; gap:4px; border-top:1px solid rgba(255,255,255,0.08)"><span style="font-size:14px; font-weight:500; color:#F5F6F8">--surface</span><span style="font-size:13px; color:#7C8492">#0A0C10 &middot; cards</span></div>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden">
+          <div style="height:96px; background:#101319"></div>
+          <div style="padding:16px 18px; display:flex; flex-direction:column; gap:4px; border-top:1px solid rgba(255,255,255,0.08)"><span style="font-size:14px; font-weight:500; color:#F5F6F8">--surface-hover</span><span style="font-size:13px; color:#7C8492">#101319 &middot; card hover</span></div>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,0.08); border-radius:12px; overflow:hidden">
+          <div style="height:96px; background:#000000; display:flex; flex-direction:column; justify-content:center; gap:14px; padding:0 18px"><div style="height:1px; background:rgba(255,255,255,0.08)"></div><div style="height:1px; background:rgba(255,255,255,0.16)"></div></div>
+          <div style="padding:16px 18px; display:flex; flex-direction:column; gap:4px; border-top:1px solid rgba(255,255,255,0.08)"><span style="font-size:14px; font-weight:500; color:#F5F6F8">--border / --border-hover</span><span style="font-size:13px; color:#7C8492">white 8% / 16%</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px">
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:24px; display:flex; flex-direction:column; gap:8px">
+          <span style="font-size:22px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">Text primary</span>
+          <span style="font-size:13px; color:#7C8492">--text-primary &middot; #F5F6F8 &middot; headlines, links</span>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:24px; display:flex; flex-direction:column; gap:8px">
+          <span style="font-size:22px; font-weight:400; letter-spacing:-0.02em; color:#9BA1AC">Text secondary</span>
+          <span style="font-size:13px; color:#7C8492">--text-secondary &middot; #9BA1AC &middot; body copy</span>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:24px; display:flex; flex-direction:column; gap:8px">
+          <span style="font-size:22px; font-weight:400; letter-spacing:-0.02em; color:#7C8492">Text tertiary</span>
+          <span style="font-size:13px; color:#7C8492">--text-tertiary &middot; #7C8492 &middot; labels, meta, footer</span>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:24px; display:flex; flex-direction:column; gap:12px">
+          <div style="display:flex; flex-wrap:wrap; gap:10px">
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4ADE80; border:1px solid rgba(74,222,128,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#4ADE80"></span>Live</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#FFB74D; border:1px solid rgba(255,183,77,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#FFB74D"></span>In development</span>
+          </div>
+          <span style="font-size:13px; color:#7C8492">--status-live #4ADE80 &middot; --status-dev #FFB74D</span>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(40px,5vw,56px); background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:24px">
+        <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">The spectrum</span>
+        <div style="height:1px; background:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA,#FF4D6D)"></div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px 28px; font-size:13px; color:#7C8492">
+          <span><span style="color:#FF4D6D">&#9679;</span> #FF4D6D</span>
+          <span><span style="color:#FF9F43">&#9679;</span> #FF9F43</span>
+          <span><span style="color:#FFD93D">&#9679;</span> #FFD93D</span>
+          <span><span style="color:#4ADE80">&#9679;</span> #4ADE80</span>
+          <span><span style="color:#38BDF8">&#9679;</span> #38BDF8</span>
+          <span><span style="color:#A78BFA">&#9679;</span> #A78BFA</span>
+        </div>
+        <p style="margin:0; max-width:62ch; font-size:15px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">Slightly desaturated, never toy-like. Always ordered as listed, always looping back to the first color so a gradient has no seam. Permitted uses: the 1px page bar, the X in the wordmark, and one hairline rule per page. Never as a fill behind text, never on a headline, never as a background wash.</p>
+      </div>
+    </section>
+
+    <section id="type" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Type</span>
+      <p style="margin:clamp(20px,2.4vw,28px) 0 clamp(40px,5vw,56px); max-width:60ch; font-size:17px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">One family: Helvetica Neue, falling back to Arial. Weights 400 and 500 only. Tight tracking at display sizes does most of the work. Sentence case everywhere except eyebrows.</p>
+
+      <div style="display:flex; flex-direction:column">
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Display &middot; 500 &middot; -0.045em &middot; 0.95</span>
+          <span style="font-size:clamp(40px,6vw,72px); font-weight:500; letter-spacing:-0.045em; line-height:0.95; color:#F5F6F8">XUsAll</span>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Statement &middot; 500 &middot; -0.03em &middot; 1.15</span>
+          <span style="font-size:clamp(24px,3.4vw,38px); font-weight:500; letter-spacing:-0.03em; line-height:1.15; color:#F5F6F8">Connection. People. Progress.</span>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Section lead &middot; 400 &middot; -0.015em &middot; 1.55</span>
+          <span style="font-size:clamp(19px,2.1vw,24px); font-weight:400; letter-spacing:-0.015em; line-height:1.55; color:#9BA1AC">Tools that are simply useful and accessible to everyone.</span>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Heading &middot; 500 &middot; -0.02em &middot; 1.3</span>
+          <span style="font-size:21px; font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">People over profits.</span>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Body &middot; 16px &middot; 400 &middot; 1.65 &middot; max 66ch</span>
+          <span style="max-width:56ch; font-size:16px; font-weight:400; line-height:1.65; color:#9BA1AC">Your information stays yours. Ours stays open: how the apps are built, how data is handled, where any money goes.</span>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Meta &middot; 13-14px &middot; 400</span>
+          <span style="font-size:14px; font-weight:400; color:#7C8492">Currently in testing. Link goes here at release.</span>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(12px,3vw,48px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08); align-items:baseline">
+          <span style="font-size:13px; color:#7C8492">Eyebrow &middot; 11px &middot; 500 &middot; +0.12em &middot; caps</span>
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Products</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="space" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Space, layout, shape</span>
+      <div style="margin-top:clamp(32px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px">
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:20px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">8px scale</span>
+          <div style="display:flex; align-items:flex-end; gap:10px">
+            <div style="width:8px; height:8px; background:#F5F6F8"></div>
+            <div style="width:16px; height:16px; background:#F5F6F8"></div>
+            <div style="width:24px; height:24px; background:#F5F6F8"></div>
+            <div style="width:32px; height:32px; background:#F5F6F8"></div>
+            <div style="width:48px; height:48px; background:#F5F6F8"></div>
+            <div style="width:64px; height:64px; background:#F5F6F8"></div>
+          </div>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AC">8 / 16 / 24 / 32 / 48 / 64 / 96 / 120 / 160. Nothing off the scale.</p>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:20px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Layout</span>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#9BA1AC; text-wrap:pretty">Content column max 1120px. Gutters 24px mobile, 48px desktop. Section padding 120 to 160px desktop, 80 to 96px mobile. Sections separated by a 1px white 8% rule, never by a heavier divider or a background change.</p>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:20px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Shape and elevation</span>
+          <div style="display:flex; gap:12px">
+            <div style="width:64px; height:44px; border-radius:6px; border:1px solid rgba(255,255,255,0.16)"></div>
+            <div style="width:64px; height:44px; border-radius:12px; border:1px solid rgba(255,255,255,0.16)"></div>
+            <div style="width:64px; height:44px; border-radius:999px; border:1px solid rgba(255,255,255,0.16)"></div>
+          </div>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AC; text-wrap:pretty">6px small, 12px cards, pill for status. Borders do the separation work. No shadows, no glows, no glass, no gradients on surfaces.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Components</span>
+      <p style="margin:clamp(20px,2.4vw,28px) 0 clamp(40px,5vw,56px); max-width:60ch; font-size:17px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">A small set, used everywhere. No icons anywhere in the system.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px">
+        <div style="display:flex; flex-direction:column; gap:20px; background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); transition:background 200ms cubic-bezier(0.4,0,0.2,1), border-color 200ms cubic-bezier(0.4,0,0.2,1), transform 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:#101319; border-color:rgba(255,255,255,0.16); transform:translateY(-2px)">
+          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
+            <span style="font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">Product card</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4ADE80; border:1px solid rgba(74,222,128,0.32); border-radius:999px; padding:4px 10px"><span style="width:5px; height:5px; border-radius:999px; background:#4ADE80"></span>Live</span>
+          </div>
+          <p style="margin:0; font-size:16px; line-height:1.6; color:#9BA1AC; text-wrap:pretty">Hover this card. Surface lifts one step, border brightens to 16%, 2px of translateY. No scale, no shadow, no glow.</p>
+          <div style="margin-top:auto; padding-top:12px; display:flex; align-items:baseline; justify-content:space-between; gap:16px">
+            <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Platform</span>
+            <span style="font-size:14px; font-weight:500; color:#F5F6F8">action link <span style="color:#9BA1AC">&#8599;</span></span>
+          </div>
+        </div>
+
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:24px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Links</span>
+          <div style="display:flex; flex-direction:column; gap:20px; align-items:flex-start">
+            <a href="#components" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; letter-spacing:-0.01em; color:#F5F6F8; padding-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.16); transition:border-color 200ms cubic-bezier(0.4,0,0.2,1)" style-hover="border-color:#F5F6F8">Primary link <span style="color:#9BA1AC">&#8595;</span></a>
+            <a href="#components" style="font-size:14px; color:#9BA1AC; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">Navigation link</a>
+            <span style="font-size:14px; color:#7C8492">Inert meta text</span>
+          </div>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AC; text-wrap:pretty">There are no filled buttons in the brand. A link with a hairline underline is the strongest call to action available.</p>
+        </div>
+
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:24px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Principle row</span>
+          <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.4fr); gap:24px; padding:24px 0; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08)">
+            <h3 style="margin:0; font-size:17px; font-weight:500; letter-spacing:-0.02em; line-height:1.3; color:#F5F6F8">Label.</h3>
+            <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AC">Two-column list separated by hairlines. Used for principles and any short definition list.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="motion" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Motion and accessibility</span>
+      <div style="margin-top:clamp(32px,4vw,48px); display:flex; flex-direction:column">
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">The spectrum bar</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">1px tall, fixed to the top of the viewport, above everything. Translated on a 60 second linear loop, seamless, transform only. It should be barely perceptible. Frozen, not removed, under reduced motion.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">Everything else</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">150 to 250ms on cubic-bezier(0.4, 0, 0.2, 1). One fade and rise of 14px for section entrances, once, no re-trigger. Anchor navigation scrolls smoothly. Nothing bounces.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:clamp(16px,4vw,64px); padding:clamp(24px,3vw,32px) 0; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08)">
+          <h3 style="margin:0; font-size:19px; font-weight:500; letter-spacing:-0.02em; color:#F5F6F8">Accessibility floor</h3>
+          <p style="margin:0; max-width:56ch; font-size:16px; line-height:1.65; color:#9BA1AC; text-wrap:pretty">WCAG AA on all text. Tertiary is #7C8492, which clears 4.5:1 on black at any size. Focus is a 1px primary-text outline offset 4px, never a spectrum ring. Semantic landmarks, real headings, no layout shift from the bar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="voice" style="border-top:1px solid rgba(255,255,255,0.08); padding:clamp(72px,9vw,120px) 0 clamp(96px,12vw,160px)">
+      <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#7C8492">Voice</span>
+      <p style="margin:clamp(20px,2.4vw,28px) 0 clamp(40px,5vw,56px); max-width:62ch; font-size:clamp(19px,2.1vw,24px); font-weight:400; letter-spacing:-0.015em; line-height:1.55; color:#9BA1AC; text-wrap:pretty">Quiet confidence. Plainspoken, unsentimental, a little idealistic, never corporate and never preachy. Short sentences. Second person for product copy, first person plural only for brand moments. No exclamation marks, no em dashes, no emoji.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px">
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:16px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#4ADE80">Write</span>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:16px; line-height:1.55; color:#F5F6F8">
+            <span>Four things, so far. All free. More coming.</span>
+            <span>Your address is never stored.</span>
+            <span>Free first. Funded by tips and a vision.</span>
+          </div>
+        </div>
+        <div style="background:#0A0C10; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:clamp(28px,3.4vw,40px); display:flex; flex-direction:column; gap:16px">
+          <span style="font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#FF4D6D">Do not write</span>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:16px; line-height:1.55; color:#7C8492">
+            <span>Revolutionizing how you connect.</span>
+            <span>A seamless, cutting-edge experience.</span>
+            <span>Empowering users everywhere!</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(56px,7vw,88px); max-width:26ch; height:1px; background:linear-gradient(90deg,#FF4D6D,#FF9F43,#FFD93D,#4ADE80,#38BDF8,#A78BFA); opacity:0.7"></div>
+      <p style="margin:clamp(28px,3.5vw,40px) 0 0; max-width:36ch; font-size:clamp(24px,3.6vw,40px); font-weight:400; letter-spacing:-0.03em; line-height:1.18; color:#F5F6F8; text-wrap:pretty">When a decision is not covered here, choose the quieter option. <span style="color:#7C8492">Restraint is the system.</span></p>
+    </section>
+
+  </main>
+
+  <footer style="border-top:1px solid rgba(255,255,255,0.08)">
+    <div style="max-width:1120px; margin:0 auto; padding:40px clamp(24px,5vw,48px) 56px; display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:24px 40px">
+      <span style="font-size:13px; color:#7C8492">&#169; 2026 XUsAll &middot; design system v1</span>
+      <a href="XUsAll Landing.dc.html" style="font-size:13px; color:#7C8492; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">Landing page</a>
+      <a href="mailto:xusalldevelopment@gmail.com" style="font-size:13px; color:#7C8492; transition:color 180ms cubic-bezier(0.4,0,0.2,1)" style-hover="color:#F5F6F8">xusalldevelopment@gmail.com</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;spectrumSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:60,&quot;min&quot;:20,&quot;max&quot;:180,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const bar = document.querySelector("[data-spectrum]");
+    if (bar) bar.style.animationDuration = Math.max(20, this.props.spectrumSeconds ?? 60) + "s";
+  }
+  componentDidUpdate() { this.componentDidMount(); }
+}
+</script>
+</body>
+</html>
