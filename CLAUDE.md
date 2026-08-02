@@ -3,9 +3,11 @@
 Read this first. XUsAll is the parent brand and home page for the XUs*
 family of free, privacy-respecting software.
 
-**Live:** https://xusall.com · **Host:** Vercel project `xusall` (not yet
-linked, see below) · **Stack:** Next.js 14 App Router, plain CSS, zero UI
-dependencies. Static site, no database, no runtime data fetching.
+**Live:** https://www.xusall.com (xusall.com redirects to www, matching the
+convention already used by notes.xusall.com and democracy.xusall.com) ·
+**Host:** Vercel project `xusall` · **Stack:** Next.js 14 App Router, plain
+CSS, zero UI dependencies. Static site, no database, no runtime data
+fetching.
 
 ## The mission, in one line
 
@@ -77,6 +79,7 @@ update it, not the handoff, as the system evolves.
 |---|---|---|
 | `/robots.txt` | `app/robots.js` | Allows everything. Names AI agents explicitly, since being found by them is the point. |
 | `/sitemap.xml` | `app/sitemap.js` | Two URLs, hand-written since the site has two pages. |
+| `/llms.txt` | `app/llms.txt/route.js` | Plain-text site map for language models, llmstxt.org convention. Derives its product list from `lib/products.js`. |
 | `/manifest.webmanifest` | `app/manifest.js` | |
 | `/icon.svg`, `/apple-icon` | `app/icon.svg`, `app/apple-icon.js` | |
 | `/opengraph-image` | `app/opengraph-image.js` | Deliberately not `runtime = 'edge'`, see the comment in the file. Don't add it. |
@@ -89,14 +92,18 @@ update it, not the handoff, as the system evolves.
   as its canonical and inherit "How We Build | XUsAll" as a broken title.
 - `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION` env vars are read
   in `app/layout.js` and omitted entirely when unset. No placeholder is ever
-  committed. Neither is set yet; do that once the domain is verified in
-  Search Console and Bing Webmaster Tools.
+  committed. **Neither needs to be set for this site**: the whole
+  `xusall.com` domain (which covers `www.xusall.com` too) is already
+  verified in both Search Console and Bing Webmaster Tools via a DNS-level
+  domain property, from when `notes.xusall.com` and `democracy.xusall.com`
+  were verified. The meta-tag/env-var path exists only for a future
+  property that needs its own, separate per-URL verification.
 
 ## Environment
 
 | Variable | Required? | Effect |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_HOST` | Optional | Overrides the canonical host. Defaults to `xusall.com`. |
+| `NEXT_PUBLIC_SITE_HOST` | Optional | Overrides the canonical host. Defaults to `www.xusall.com`. |
 | `GOOGLE_SITE_VERIFICATION` | Optional | Emits the Search Console meta tag. |
 | `BING_SITE_VERIFICATION` | Optional | Emits the `msvalidate.01` meta tag for Bing Webmaster Tools. |
 
@@ -107,21 +114,20 @@ npm install
 npm run dev        # http://localhost:3000
 ```
 
-The domain is already owned but the Vercel project has not been linked or
-deployed yet (no `.vercel/` directory exists). Run `npx vercel link` and
-`npx vercel --prod` (or push to the connected Git remote) when ready to go
-live, then point `xusall.com`'s DNS at Vercel.
+Linked to the Vercel project `xusall` and deployed to
+`https://www.xusall.com`. `npx vercel --prod` ships a new production
+deployment from this directory.
 
 ## Next moves
 
-1. **Deploy.** Link the Vercel project, connect the domain, ship it.
-2. **Play Store / App Store links.** Drop XUsCurrency's and XUsContacts's
+1. **Play Store / App Store links.** Drop XUsCurrency's and XUsContacts's
    URLs into `lib/products.js` the moment each is available, per the TODOs
    in that file.
-3. **Search Console / Bing.** Verify the domain, set the two verification
-   env vars in Vercel, redeploy, submit `https://xusall.com/sitemap.xml` to
-   both.
-4. **OG image asset review.** `app/opengraph-image.js` and
+2. **Sitemap submission.** The domain is already verified in Search Console
+   and Bing Webmaster Tools (see the SEO section above), so the only
+   remaining step is submitting `https://www.xusall.com/sitemap.xml` to
+   both, which needs a console login and isn't something to script.
+3. **OG image asset review.** `app/opengraph-image.js` and
    `app/apple-icon.js` render the wordmark in flat color rather than the
    animated spectrum-gradient treatment used on the live site, since that
    effect doesn't translate to a static raster image. Revisit if a designer
