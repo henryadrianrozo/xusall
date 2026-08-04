@@ -70,7 +70,20 @@ color so a gradient has no seam:
 #FF4D6D → #FF9F43 → #FFD93D → #4ADE80 → #38BDF8 → #A78BFA → (repeat #FF4D6D)
 ```
 
-Slightly desaturated on purpose. Sophisticated, not toy-like.
+Bright and punchy on purpose. When color appears in an XUsAll product it should
+be saturated and confident rather than washed out. Pastel reads as tentative,
+and these tools are not tentative.
+
+The restraint in this system is in **how rarely** color appears, not in how
+loud it is when it does. A page with one 1px spectrum bar and a single colored
+word is already disciplined; muting that word too is belt and braces.
+
+**XUsPomodoro is the reference implementation.** Its three timer colors
+(`#FF3B30`, `#7BE04A`, `#8E7BFF`) are the intended level of punch, and its
+design system documents the one rule that comes with it: when a fill gets this
+saturated, the text on top has to be pure white or near-black, whichever
+actually measures, never a tint of the fill. See
+`~/projects/xuspomodoro/DESIGN_SYSTEM.md`.
 
 ---
 
