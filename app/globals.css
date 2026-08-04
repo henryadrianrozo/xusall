@@ -429,7 +429,7 @@ button:focus-visible {
 .product-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -440,10 +440,39 @@ button:focus-visible {
     transform 200ms var(--ease-standard);
 }
 
-a.product-card:hover {
+/* The card lifts only when its own click target is hovered, not when a
+   secondary link inside it is. Matching on the anchor rather than the card is
+   what keeps those two apart now that the card is a div. */
+.product-card:has(a.product-card__hit:hover) {
   background: var(--surface-hover);
   border-color: var(--border-hover);
   transform: translateY(-2px);
+}
+
+/* Holds the layout the card itself used to carry. */
+.product-card__hit {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: inherit;
+}
+
+/* A second, quieter destination on a card that already has a primary one. */
+.product-card__aside {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition:
+    color 200ms var(--ease-standard),
+    border-color 200ms var(--ease-standard);
+}
+
+.product-card__aside:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
 }
 
 .product-card.is-dev {
@@ -887,4 +916,101 @@ a.product-card:hover {
 
 .hwb-closer-links a:hover {
   color: #ffffff;
+}
+
+/* ---------- legal / policy pages ---------- */
+/* Long-form prose, narrower measure than the marketing pages. Used by
+   /xuscurrency/privacy, and by any policy page added later. */
+
+.policy-hero {
+  padding: clamp(120px, 20vh, 200px) 0 clamp(40px, 5vw, 64px);
+  max-width: 62ch;
+}
+
+.policy-title {
+  margin: clamp(16px, 2.4vw, 24px) 0 0;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--text-primary);
+}
+
+.policy-updated {
+  margin: clamp(16px, 2vw, 20px) 0 0;
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+.policy-lead {
+  margin: clamp(24px, 3vw, 32px) 0 0;
+  font-size: clamp(17px, 1.9vw, 20px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+.policy-body {
+  max-width: 62ch;
+  padding-bottom: clamp(100px, 14vw, 180px);
+}
+
+/* A hairline between sections, matching how the rest of the site divides
+   content. Borders do the separation work here too. */
+.policy-section {
+  border-top: 1px solid var(--border);
+  padding: clamp(36px, 4.5vw, 52px) 0 0;
+  margin-top: clamp(36px, 4.5vw, 52px);
+}
+
+.policy-section:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.policy-section h2 {
+  margin: 0 0 16px;
+  font-size: clamp(19px, 2.1vw, 23px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.policy-section p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+.policy-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.policy-list {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+.policy-list li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+/* Scoped through .policy-section so it outranks the paragraph colour rule
+   above without reaching for !important. */
+.policy-section p.policy-contact-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.policy-section .underline-link {
+  display: inline-block;
+  margin-top: 4px;
 }

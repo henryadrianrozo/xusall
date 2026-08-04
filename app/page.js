@@ -49,23 +49,29 @@ function ProductCard({ product }) {
     </>
   );
 
-  if (isLive) {
-    return (
-      <a
-        href={product.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="product-card"
-        data-reveal
-      >
-        {body}
-      </a>
-    );
-  }
-
+  // The card is always a div, and the click target is an anchor inside it. A
+  // live card used to be one big anchor, which meant any second link (like the
+  // privacy policy below) would have been an anchor nested in an anchor: invalid
+  // HTML, and browsers resolve it unpredictably.
   return (
-    <div className="product-card is-dev" data-reveal>
-      {body}
+    <div className={`product-card${isLive ? '' : ' is-dev'}`} data-reveal>
+      {isLive ? (
+        <a
+          href={product.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="product-card__hit"
+        >
+          {body}
+        </a>
+      ) : (
+        <div className="product-card__hit">{body}</div>
+      )}
+      {product.privacyHref && (
+        <a className="product-card__aside" href={product.privacyHref}>
+          Privacy policy
+        </a>
+      )}
     </div>
   );
 }
