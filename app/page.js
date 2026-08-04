@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
-import { PRODUCTS } from '@/lib/products';
+import { PRODUCTS, PRODUCT_COUNT_WORD, productName } from '@/lib/products';
 import { CONTACT_EMAIL } from '@/lib/site';
 
 function ProductCard({ product }) {
@@ -118,7 +118,7 @@ export default function Home() {
       <section id="products" className="section">
         <div className="section-head" data-reveal>
           <h2 className="section-title">Products</h2>
-          <p className="section-intro">Four things, so far. All free.</p>
+          <p className="section-intro">{PRODUCT_COUNT_WORD} things, so far. All free.</p>
         </div>
 
         <div className="products-grid">
@@ -212,24 +212,26 @@ export default function Home() {
         <div className="footer-inner">
           <span className="footer-copyright">© 2026 XUsAll</span>
           <nav className="footer-nav">
-            <a
-              href="https://democracy.xusall.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              XUsDemocracy
-            </a>
-            <a
-              href="https://notes.xusall.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              XUsNotes
-            </a>
-            <span className="footer-static">XUsCurrency</span>
-            <span className="footer-static">XUsContacts</span>
+            {/* Derived from lib/products.js rather than hand-listed, so a new
+                product or a shipped link shows up here without a second edit.
+                A product without a URL yet is plain text, not a dead link. */}
+            {PRODUCTS.map((product) =>
+              product.href ? (
+                <a
+                  key={product.key}
+                  href={product.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                >
+                  {productName(product)}
+                </a>
+              ) : (
+                <span key={product.key} className="footer-static">
+                  {productName(product)}
+                </span>
+              )
+            )}
             <Link href="/how-we-build" className="footer-link">
               How we build
             </Link>

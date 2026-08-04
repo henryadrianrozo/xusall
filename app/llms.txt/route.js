@@ -1,5 +1,5 @@
 import { SITE_URL, CONTACT_EMAIL } from '@/lib/site';
-import { PRODUCTS } from '@/lib/products';
+import { PRODUCTS, PRODUCT_COUNT_WORD, productName } from '@/lib/products';
 
 // Served at /llms.txt, following the llmstxt.org convention: a plain-text map
 // of the site for language models.
@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 
 function body() {
   const productLines = PRODUCTS.map((product) => {
-    const name = product.wordmark.map((part) => part.text).join('');
+    const name = productName(product);
     const status = product.status === 'live' ? 'Live' : 'In development';
     const link = product.href ? ` (${product.href})` : '';
     return `- ${name}${link}: ${status}, ${product.platform}. ${product.description}`;
@@ -27,7 +27,7 @@ Corrections and questions go to ${CONTACT_EMAIL}.
 
 ## Core pages
 
-- [Home](${SITE_URL}/): The hero, what XUsAll is, the four products, the operating principles, and contact.
+- [Home](${SITE_URL}/): The hero, what XUsAll is, the ${PRODUCT_COUNT_WORD.toLowerCase()} products, the operating principles, and contact.
 - [How we build](${SITE_URL}/how-we-build): How every XUsAll product is made by one person working with generative AI tools, written for a non-technical reader.
 
 ## Products

@@ -13,8 +13,9 @@ fetching.
 
 Free software, given away, built for people instead of profit. This site is
 the front door to the family: it sends people to the actual products
-(XUsDemocracy, XUsNotes, and eventually XUsCurrency and XUsContacts) and
-explains, in one place, why they exist and how they're built.
+(XUsDemocracy, XUsNotes, and eventually XUsPomodoro, XUsCurrency, and
+XUsContacts) and explains, in one place, why they exist and how they're
+built.
 
 ## Where the design comes from
 
@@ -43,11 +44,14 @@ update it, not the handoff, as the system evolves.
 - **The domain lives in exactly one place:** `lib/site.js`. Never hardcode a
   hostname.
 - **Product links live in exactly one place:** `lib/products.js`
-  (`PRODUCT_URLS` + the `PRODUCTS` array that drives the four cards on the
-  landing page). When XUsCurrency or XUsContacts ship, add the Play
-  Store/App Store URL to the empty string in `PRODUCT_URLS` and flip that
-  product's `status` to `'live'` in the `PRODUCTS` array. Nothing else
-  needs to change.
+  (`PRODUCT_URLS` + the `PRODUCTS` array). It now drives all four places a
+  product appears: the cards on the landing page, the footer nav, the
+  "N things, so far" line (via `PRODUCT_COUNT_WORD`), and `/llms.txt`. The
+  footer and the count used to be hand-written and had already gone stale
+  once; do not reintroduce a hardcoded product name, URL, or count anywhere.
+  When XUsPomodoro gets its domain, or XUsCurrency or XUsContacts ship, put
+  the URL in the empty string in `PRODUCT_URLS` and flip that product's
+  `status` to `'live'`. Nothing else needs to change.
 - **No em dashes or en dashes anywhere.** Not in copy, comments, docs, or
   commit messages. They read as AI-generated and undermine the site's
   credibility. Rewrite the sentence with a comma, colon, or period instead.
@@ -120,9 +124,11 @@ deployment from this directory.
 
 ## Next moves
 
-1. **Play Store / App Store links.** Drop XUsCurrency's and XUsContacts's
-   URLs into `lib/products.js` the moment each is available, per the TODOs
-   in that file.
+1. **Product links.** Drop XUsPomodoro's subdomain, XUsCurrency's Play Store
+   URL, and XUsContacts's App Store URL into `lib/products.js` the moment
+   each is available, per the TODOs in that file. XUsPomodoro is built and
+   sitting in `~/projects/xuspomodoro`; it only needs
+   `pomodoro.xusall.com` pointed at a Vercel project.
 2. **Sitemap submission.** The domain is already verified in Search Console
    and Bing Webmaster Tools (see the SEO section above), so the only
    remaining step is submitting `https://www.xusall.com/sitemap.xml` to
