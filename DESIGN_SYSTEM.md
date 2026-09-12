@@ -37,6 +37,34 @@ drawn from the palette below, never invented per-product.
 - XUsContacts: no color assigned yet; plain white is a valid choice when a
   product doesn't need one
 
+**The line.** One tagline, used everywhere, decided 2026-09-12:
+
+> **Free software, built for us all.**
+
+With the mission as the supporting line directly beneath it on this site,
+never as part of the tagline itself:
+
+> Given away, built for people instead of profit.
+
+"Built for us all" is the load-bearing half: it cashes out the wordmark, since
+the X is a variable standing for some verb applied to us and applied to all.
+The tagline is that idea stated plainly.
+
+Deliberately not "utilities". That word fits XUsPomodoro, XUsCurrency,
+XUsNotes and XUsCalendar, but XUsMemories is for recording a life and
+XUsPhotos is for shaping how someone presents themselves. Neither is a
+utility, and the word undersells them. "Software" covers the whole family.
+
+**Attribution in child products.** Every product that mentions the family uses
+exactly this, in the footer or an about screen:
+
+> Part of XUsAll, free software built for us all.
+
+This replaces the five phrasings currently in the wild: "Free software for
+everyone, built for people instead of profit", "Free software, given away,
+built for people instead of profit", "part of XUsAll", "Part of [XUsAll]" and
+"Brought to you by XUsAll". The rollout across the eight products is pending.
+
 ---
 
 ## Color

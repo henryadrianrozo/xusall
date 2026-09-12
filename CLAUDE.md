@@ -1,9 +1,11 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-12 · `1a27470`  
-**State:** Live. Parent brand home page for the XUs family. Next.js 14, static.  
-**Next:** Nothing outstanding. Last change added the XUsMemories privacy policy page.
+**Updated:** 2026-09-12 · `0e73628`  
+**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database.  
+**Last shipped:** The XUsMemories privacy policy page, after flipping XUsCurrency live with its real Play Store URL.  
+**Missing:** The site lists only four of eight products: XUsCurrency, XUsDemocracy, XUsMemories, XUsNotes. XUsPomodoro, XUsCalendar, XUsContacts and XUsPhotos are absent. The brand line is also said five different ways across the family.  
+**Next:** Add the four missing products, then roll out the settled brand line and standard attribution across every product. See DESIGN_SYSTEM.md.
 <!-- STATUS:END -->
 
 Read this first. XUsAll is the parent brand and home page for the XUs*
@@ -17,11 +19,16 @@ fetching.
 
 ## The mission, in one line
 
-Free software, given away, built for people instead of profit. This site is
-the front door to the family: it sends people to the actual products
-(XUsDemocracy, XUsNotes, and eventually XUsPomodoro, XUsCurrency, and
-XUsContacts) and explains, in one place, why they exist and how they're
-built.
+**Free software, built for us all.** Given away, built for people instead of
+profit. That tagline is settled; see `DESIGN_SYSTEM.md` for why it is worded
+that way and for the standard attribution every child product should use.
+
+This site is the front door to the family: it sends people to the actual
+products and explains, in one place, why they exist and how they're built.
+
+**The family is eight products.** XUsDemocracy, XUsNotes, XUsCurrency and
+XUsMemories are on the site today. XUsPomodoro, XUsCalendar, XUsContacts and
+XUsPhotos are not, and should be added.
 
 ## Where the design comes from
 
