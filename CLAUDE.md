@@ -1,5 +1,11 @@
 # XUsAll project brain
 
+<!-- STATUS:BEGIN -->
+**Updated:** 2026-09-12 · `1a27470`  
+**State:** Live. Parent brand home page for the XUs family. Next.js 14, static.  
+**Next:** Nothing outstanding. Last change added the XUsMemories privacy policy page.
+<!-- STATUS:END -->
+
 Read this first. XUsAll is the parent brand and home page for the XUs*
 family of free, privacy-respecting software.
 
@@ -138,3 +144,15 @@ deployment from this directory.
    animated spectrum-gradient treatment used on the live site, since that
    effect doesn't translate to a static raster image. Revisit if a designer
    wants a hand-crafted static version instead.
+
+## Status block
+
+At the end of a session, and in the same commit as any feature-sized piece of
+work, update the `STATUS:BEGIN`/`STATUS:END` block at the top of
+`CLAUDE.md`: the date, the current commit hash, and the
+State / Blocked / Next lines. Keep it to those few lines; the detail belongs in
+the prose below it.
+
+`~/Projects/PROJECT_STATUS.md` is generated from that block, so it is the only
+place this project's status needs to be written. Nothing is copied anywhere
+else by hand.
