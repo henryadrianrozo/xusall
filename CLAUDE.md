@@ -1,9 +1,9 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-12 · `0e73628`  
+**Updated:** 2026-09-13 · `887db83`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database.  
-**Last shipped:** The XUsMemories privacy policy page, after flipping XUsCurrency live with its real Play Store URL.  
+**Last shipped:** The XUsContacts privacy policy page at /xuscontacts/privacy, for its App Store listing, after the XUsMemories one.  
 **Missing:** The site lists only four of eight products: XUsCurrency, XUsDemocracy, XUsMemories, XUsNotes. XUsPomodoro, XUsCalendar, XUsContacts and XUsPhotos are absent. The brand line is also said five different ways across the family.  
 **Next:** Add the four missing products, then roll out the settled brand line and standard attribution across every product. See DESIGN_SYSTEM.md.
 <!-- STATUS:END -->
@@ -48,6 +48,7 @@ update it, not the handoff, as the system evolves.
 |---|---|
 | `/` | The landing page. Hero, four product cards, philosophy/mission, contact. |
 | `/how-we-build` | Transparency page: the AI-assisted workflow used to build every XUsAll product, written for a non-technical reader. |
+| `/xuscontacts/privacy` | XUsContacts privacy policy; the URL on its App Store listing, so do not move it. |
 
 ## Conventions
 
