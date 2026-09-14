@@ -1,7 +1,7 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-14 · `2f7f77f`  
+**Updated:** 2026-09-14 · `9eb881a`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. XUsContacts' official page is served at contacts.xusall.com (host rewrite; the www path redirects), with current copy and build 25 screenshots; its privacy policy is at contacts.xusall.com/privacy and at the registered www URL.  
 **Last shipped:** The contacts.xusall.com page as the official address, refreshed features and screenshots, and absolute header links for subdomains.  
 **Missing:** XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
