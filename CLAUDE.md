@@ -48,7 +48,7 @@ update it, not the handoff, as the system evolves.
 |---|---|
 | `/` | The landing page. Hero, four product cards, philosophy/mission, contact. |
 | `/how-we-build` | Transparency page: the AI-assisted workflow used to build every XUsAll product, written for a non-technical reader. |
-| `/xuscontacts` | XUsContacts product page. `contacts.xusall.com` redirects here (`next.config.mjs`), and the app's birthday text links that address, so keep both. The App Store link appears once `PRODUCT_URLS.contacts` is filled in. |
+| `contacts.xusall.com` | **The official XUsContacts page** (`app/xuscontacts/page.js`), served on its subdomain by a host rewrite in `next.config.mjs`; `/privacy` there is the privacy policy. `www.xusall.com/xuscontacts` redirects to the subdomain. Product pages always live on `<product>.xusall.com` (Adrian). The app's ask-by-text links this address. The App Store link appears once `PRODUCT_URLS.contacts` is filled in. |
 | `/xuscontacts/privacy` | XUsContacts privacy policy; the URL on its App Store listing, so do not move it. |
 
 ## Conventions
@@ -57,7 +57,9 @@ update it, not the handoff, as the system evolves.
   properties. Dark only, no `[data-theme]` branching anywhere, unlike
   XUsDemocracy: do not add a light mode or a toggle.
 - **The domain lives in exactly one place:** `lib/site.js`. Never hardcode a
-  hostname.
+  hostname. Product subdomains (`CONTACTS_URL`) live there too, and the shared
+  `Header` links absolutely to `SITE_URL`, because it also renders on product
+  subdomains where "/" is the product page.
 - **Product links live in exactly one place:** `lib/products.js`
   (`PRODUCT_URLS` + the `PRODUCTS` array). It now drives all four places a
   product appears: the cards on the landing page, the footer nav, the
