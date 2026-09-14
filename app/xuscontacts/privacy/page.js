@@ -75,7 +75,7 @@ export default function XUsContactsPrivacy() {
           <List
             items={[
               'Archived contacts, saved as a full copy before they are removed from your phone',
-              'Tags, locations and notes you add to contacts',
+              'The city, tags and notes you add to contacts',
               'Your organizing decisions, such as who you kept, hid or added to your safe list',
               'Your own contact cards and their QR code settings',
               'Instagram follower and following lists you choose to import',
@@ -90,11 +90,20 @@ export default function XUsContactsPrivacy() {
         </section>
 
         <section className="policy-section">
+          <h2>Searching by Place</h2>
+          <p>
+            When you give a contact a city, XUsContacts can find them by the region, country and
+            continent around it. That uses a list of places built into the app, from GeoNames. Nothing
+            is looked up online, and no city or contact is sent anywhere.
+          </p>
+        </section>
+
+        <section className="policy-section">
           <h2>iCloud Protection</h2>
           <p>
             XUsContacts can keep a copy of what it stores in your own private iCloud account, so it
-            comes back if you get a new iPhone or reinstall the app: your archive, the tags,
-            locations and notes you add to contacts, your hidden contacts and safe list, and your
+            comes back if you get a new iPhone or reinstall the app: your archive, the city,
+            tags and notes you add to contacts, your hidden contacts and safe list, and your
             own contact cards. This is on by default and you can turn it off in Backup &amp;
             Protection. The copy is stored in your iCloud through
             Apple&rsquo;s CloudKit, not on any server of ours, and the contact details in it are
@@ -125,7 +134,7 @@ export default function XUsContactsPrivacy() {
         <section className="policy-section">
           <h2>Asking Someone for Their Details</h2>
           <p>
-            When a contact is missing a birthday, address, email or phone number, XUsContacts can
+            When a contact is missing a phone number, email, company, city, birthday or address, XUsContacts can
             draft a text or email asking them for it. The message opens in Messages or Mail for
             you to review and send yourself. XUsContacts never sends anything on your behalf.
           </p>
