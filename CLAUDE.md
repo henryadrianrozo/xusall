@@ -1,7 +1,7 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-14 · `a619ce3`  
+**Updated:** 2026-09-14 · `434c9d8`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. XUsContacts now has a product page at /xuscontacts, with contacts.xusall.com redirecting to it, and its privacy policy covers iCloud Protection.  
 **Last shipped:** The XUsContacts product page and redirect, a blue XUsContacts wordmark on the home card, and the iCloud Protection section of its privacy policy.  
 **Missing:** contacts.xusall.com needs its DNS record at Namecheap before the redirect works. The site still lacks XUsPomodoro, XUsCalendar and XUsPhotos, and the brand line is still said several ways across the family.  
