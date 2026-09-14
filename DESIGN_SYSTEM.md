@@ -34,8 +34,8 @@ drawn from the palette below, never invented per-product.
 - **X**Us**Democracy**: X red, Democracy blue
 - **X**Us**Notes**: X and Notes both violet
 - **X**Us**Currency**: X green, Currency yellow
-- XUsContacts: no color assigned yet; plain white is a valid choice when a
-  product doesn't need one
+- **X**Us**Contacts**: X and Contacts both blue, matching the app's own
+  wordmark
 
 **The line.** One tagline, used everywhere, decided 2026-09-12:
 

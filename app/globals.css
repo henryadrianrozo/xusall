@@ -1014,3 +1014,59 @@ button:focus-visible {
   display: inline-block;
   margin-top: 4px;
 }
+
+/* ---------- product landing page (/xuscontacts) ---------- */
+
+.app-store-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px 32px;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.app-store-soon {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+/* Four phone screens in a row on desktop, a swipeable strip on a phone. The
+   strip scrolls inside itself so the page never scrolls sideways. */
+.app-screens {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding-bottom: clamp(80px, 11vw, 120px);
+}
+
+.app-screen {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .app-screens {
+    grid-template-columns: repeat(4, 62vw);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 0 calc(var(--gutter) * -1);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .app-screen {
+    scroll-snap-align: center;
+  }
+
+  /* One column on a phone, so feature text gets the full width. */
+  .app-features .principle-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}
+
+.app-closer {
+  padding: clamp(48px, 6vw, 64px) 0;
+}

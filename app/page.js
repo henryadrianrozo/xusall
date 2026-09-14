@@ -67,6 +67,11 @@ function ProductCard({ product }) {
       ) : (
         <div className="product-card__hit">{body}</div>
       )}
+      {product.pageHref && (
+        <a className="product-card__aside" href={product.pageHref}>
+          About {productName(product)}
+        </a>
+      )}
       {product.privacyHref && (
         <a className="product-card__aside" href={product.privacyHref}>
           Privacy policy

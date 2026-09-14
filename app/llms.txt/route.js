@@ -15,7 +15,8 @@ function body() {
   const productLines = PRODUCTS.map((product) => {
     const name = productName(product);
     const status = product.status === 'live' ? 'Live' : 'In development';
-    const link = product.href ? ` (${product.href})` : '';
+    const url = product.href || (product.pageHref ? `${SITE_URL}${product.pageHref}` : '');
+    const link = url ? ` (${url})` : '';
     return `- ${name}${link}: ${status}, ${product.platform}. ${product.description}`;
   }).join('\n');
 

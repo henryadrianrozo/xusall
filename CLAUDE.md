@@ -48,6 +48,7 @@ update it, not the handoff, as the system evolves.
 |---|---|
 | `/` | The landing page. Hero, four product cards, philosophy/mission, contact. |
 | `/how-we-build` | Transparency page: the AI-assisted workflow used to build every XUsAll product, written for a non-technical reader. |
+| `/xuscontacts` | XUsContacts product page. `contacts.xusall.com` redirects here (`next.config.mjs`), and the app's birthday text links that address, so keep both. The App Store link appears once `PRODUCT_URLS.contacts` is filled in. |
 | `/xuscontacts/privacy` | XUsContacts privacy policy; the URL on its App Store listing, so do not move it. |
 
 ## Conventions
