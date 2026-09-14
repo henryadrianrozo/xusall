@@ -4,7 +4,7 @@ import { CONTACT_EMAIL } from '@/lib/site';
 // Connect listing, so the path is load-bearing: do not rename or move it
 // without updating the listing too.
 const DESCRIPTION =
-  'XUsContacts privacy policy. No accounts, no advertising, no analytics, and no tracking. Your contacts and Instagram imports stay on your iPhone, and your archive stays on your iPhone or in your own iCloud.';
+  'XUsContacts privacy policy. No accounts, no advertising, no analytics, and no tracking. Your contacts and Instagram imports stay on your iPhone, and what XUsContacts keeps stays on your iPhone or in your own iCloud.';
 
 export const metadata = {
   title: 'XUsContacts Privacy Policy',
@@ -92,9 +92,11 @@ export default function XUsContactsPrivacy() {
         <section className="policy-section">
           <h2>iCloud Protection</h2>
           <p>
-            XUsContacts can keep a copy of your archive in your own private iCloud account, so it
-            comes back if you get a new iPhone or reinstall the app. This is on by default and you
-            can turn it off in Backup &amp; Protection. The copy is stored in your iCloud through
+            XUsContacts can keep a copy of what it stores in your own private iCloud account, so it
+            comes back if you get a new iPhone or reinstall the app: your archive, the tags,
+            locations and notes you add to contacts, your hidden contacts and safe list, and your
+            own contact cards. This is on by default and you can turn it off in Backup &amp;
+            Protection. The copy is stored in your iCloud through
             Apple&rsquo;s CloudKit, not on any server of ours, and the contact details in it are
             encrypted so that only your devices can read them. We cannot see or access it.
           </p>
