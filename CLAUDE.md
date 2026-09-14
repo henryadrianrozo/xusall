@@ -1,11 +1,11 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-13 · `887db83`  
-**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database.  
-**Last shipped:** The XUsContacts privacy policy page at /xuscontacts/privacy, for its App Store listing, after the XUsMemories one.  
-**Missing:** The site lists only four of eight products: XUsCurrency, XUsDemocracy, XUsMemories, XUsNotes. XUsPomodoro, XUsCalendar, XUsContacts and XUsPhotos are absent. The brand line is also said five different ways across the family.  
-**Next:** Add the four missing products, then roll out the settled brand line and standard attribution across every product. See DESIGN_SYSTEM.md.
+**Updated:** 2026-09-14 · `a619ce3`  
+**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. XUsContacts now has a product page at /xuscontacts, with contacts.xusall.com redirecting to it, and its privacy policy covers iCloud Protection.  
+**Last shipped:** The XUsContacts product page and redirect, a blue XUsContacts wordmark on the home card, and the iCloud Protection section of its privacy policy.  
+**Missing:** contacts.xusall.com needs its DNS record at Namecheap before the redirect works. The site still lacks XUsPomodoro, XUsCalendar and XUsPhotos, and the brand line is still said several ways across the family.  
+**Next:** Fill in PRODUCT_URLS.contacts when XUsContacts is approved. Then add the remaining products and roll out the brand line (see DESIGN_SYSTEM.md).
 <!-- STATUS:END -->
 
 Read this first. XUsAll is the parent brand and home page for the XUs*
