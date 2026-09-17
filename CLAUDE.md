@@ -1,7 +1,7 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-16 · `5c82875`  
+**Updated:** 2026-09-16 · `e3a3380`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). XUsMemories now has a live card on the home page.  
 **Last shipped:** The contact address is now hello@xusall.com everywhere on the site (was a Gmail address), after the memories.xusall.com page and XUsMemories card.  
 **Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check (Next moves 3). XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
