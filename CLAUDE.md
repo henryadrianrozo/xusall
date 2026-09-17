@@ -4,7 +4,7 @@
 **Updated:** 2026-09-16 · `c3c9981`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). XUsMemories now has a live card on the home page.  
 **Last shipped:** The memories.xusall.com page and XUsMemories card, linking to the App Store.  
-**Missing:** A search-indexing check (Next moves 3). XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
+**Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check (Next moves 3). XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
 **Next:** Once memories.xusall.com resolves, submit it in Google Search Console. Fill in PRODUCT_URLS.contacts when XUsContacts is approved, then add the remaining products.
 <!-- STATUS:END -->
 
@@ -143,6 +143,14 @@ deployment from this directory.
 
 ## Next moves
 
+0. **A public business phone line for XUsAll** (important, soon; Adrian
+   2026-09-16). A permanent number that forwards to his cell, from Google
+   Voice or a cheap VoIP service, so his personal number is never public.
+   It blocks the Apple EU Digital Services Act trader declaration for the
+   XUsAll LLC developer account, which needs a public phone and email
+   (email: hello@xusall.com). Apple removes apps from the EU App Store if
+   the declaration is missing, and it will be useful for the company
+   generally.
 1. **Product links.** Drop XUsPomodoro's subdomain, XUsCurrency's Play Store
    URL, and XUsContacts's App Store URL into `lib/products.js` the moment
    each is available, per the TODOs in that file. XUsPomodoro is built and
