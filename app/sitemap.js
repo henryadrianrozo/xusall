@@ -12,6 +12,7 @@ export default function sitemap() {
     { url: SITE_URL, lastModified: now, changeFrequency: 'monthly', priority: 1 },
     { url: `${SITE_URL}/how-we-build`, lastModified: now, changeFrequency: 'yearly', priority: 0.5 },
     { url: 'https://contacts.xusall.com', lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://memories.xusall.com', lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     {
       url: `${SITE_URL}/xuscurrency/privacy`,
       lastModified: now,

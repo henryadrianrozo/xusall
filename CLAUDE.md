@@ -1,11 +1,11 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-14 · `9eb881a`  
-**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. XUsContacts' official page is served at contacts.xusall.com (host rewrite; the www path redirects), with current copy and build 25 screenshots; its privacy policy is at contacts.xusall.com/privacy and at the registered www URL.  
-**Last shipped:** The contacts.xusall.com page as the official address, refreshed features and screenshots, and absolute header links for subdomains.  
-**Missing:** XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
-**Next:** Fill in PRODUCT_URLS.contacts when XUsContacts is approved. Then add the remaining products and roll out the brand line.
+**Updated:** 2026-09-16 · `dc148e3`  
+**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). XUsMemories now has a live card on the home page.  
+**Last shipped:** The memories.xusall.com page and XUsMemories card, linking to the App Store.  
+**Missing:** The memories CNAME in Namecheap (Adrian) until the domain verifies. XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
+**Next:** Once memories.xusall.com resolves, submit it in Google Search Console. Fill in PRODUCT_URLS.contacts when XUsContacts is approved, then add the remaining products.
 <!-- STATUS:END -->
 
 Read this first. XUsAll is the parent brand and home page for the XUs*
@@ -49,6 +49,8 @@ update it, not the handoff, as the system evolves.
 | `/` | The landing page. Hero, four product cards, philosophy/mission, contact. |
 | `/how-we-build` | Transparency page: the AI-assisted workflow used to build every XUsAll product, written for a non-technical reader. |
 | `contacts.xusall.com` | **The official XUsContacts page** (`app/xuscontacts/page.js`), served on its subdomain by a host rewrite in `next.config.mjs`; `/privacy` there is the privacy policy. `www.xusall.com/xuscontacts` redirects to the subdomain. Product pages always live on `<product>.xusall.com` (Adrian). The app's ask-by-text links this address. The App Store link appears once `PRODUCT_URLS.contacts` is filled in. |
+| `memories.xusall.com` | **The official XUsMemories page** (`app/xusmemories/page.js`), same host-rewrite pattern; `/privacy` there serves the privacy policy. `www.xusall.com/xusmemories` redirects to the subdomain. Carries MobileApplication JSON-LD and the Smart App Banner so name searches land here and on the App Store. |
+| `/xusmemories/privacy` | XUsMemories privacy policy; the URL on its App Store listing and in the app's About screen, so do not move it. |
 | `/xuscontacts/privacy` | XUsContacts privacy policy; the URL on its App Store listing, so do not move it. |
 
 ## Conventions
@@ -57,7 +59,7 @@ update it, not the handoff, as the system evolves.
   properties. Dark only, no `[data-theme]` branching anywhere, unlike
   XUsDemocracy: do not add a light mode or a toggle.
 - **The domain lives in exactly one place:** `lib/site.js`. Never hardcode a
-  hostname. Product subdomains (`CONTACTS_URL`) live there too, and the shared
+  hostname. Product subdomains (`CONTACTS_URL`, `MEMORIES_URL`) live there too, and the shared
   `Header` links absolutely to `SITE_URL`, because it also renders on product
   subdomains where "/" is the product page.
 - **Product links live in exactly one place:** `lib/products.js`
