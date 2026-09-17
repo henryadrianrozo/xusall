@@ -152,7 +152,17 @@ deployment from this directory.
    and Bing Webmaster Tools (see the SEO section above), so the only
    remaining step is submitting `https://www.xusall.com/sitemap.xml` to
    both, which needs a console login and isn't something to script.
-3. **OG image asset review.** `app/opengraph-image.js` and
+3. **Check search indexing** (Adrian, 2026-09-16). Something held up
+   indexing for xusall.com before. In Search Console and Bing Webmaster
+   Tools:
+   - Confirm www.xusall.com, contacts.xusall.com and memories.xusall.com
+     are indexed.
+   - Submit the sitemap.
+   - Use URL Inspection on memories.xusall.com. Its canonical is the
+     subdomain, and the www path redirects there.
+
+   Also check that a search for "XUsMemories" finds the page.
+4. **OG image asset review.** `app/opengraph-image.js` and
    `app/apple-icon.js` render the wordmark in flat color rather than the
    animated spectrum-gradient treatment used on the live site, since that
    effect doesn't translate to a static raster image. Revisit if a designer
