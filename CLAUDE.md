@@ -1,10 +1,10 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-16 · `e3a3380`  
+**Updated:** 2026-09-18 · `3723095`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). XUsMemories now has a live card on the home page.  
 **Last shipped:** The contact address is now hello@xusall.com everywhere on the site (was a Gmail address), after the memories.xusall.com page and XUsMemories card.  
-**Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check (Next moves 3). XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
+**Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check across every site, not just this one (Next moves 3; Adrian thinks none of his sites are showing up properly in Google). XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
 **Next:** Once memories.xusall.com resolves, submit it in Google Search Console. Fill in PRODUCT_URLS.contacts when XUsContacts is approved, then add the remaining products.
 <!-- STATUS:END -->
 
@@ -170,6 +170,14 @@ deployment from this directory.
      subdomain, and the www path redirects there.
 
    Also check that a search for "XUsMemories" finds the page.
+
+   **Widened 2026-09-18:** Adrian thinks none of his sites are listing
+   properly in Google. Run the same check on every live site, not just
+   xusall.com: adrianrozo.com, calendar, democracy, notes and pomodoro
+   .xusall.com, plus contacts and memories. For each, confirm it is
+   verified in Search Console, has a sitemap and robots.txt that allow
+   crawling, has no stray noindex, and has a sensible title, description
+   and canonical.
 4. **OG image asset review.** `app/opengraph-image.js` and
    `app/apple-icon.js` render the wordmark in flat color rather than the
    animated spectrum-gradient treatment used on the live site, since that
