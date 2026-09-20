@@ -1,11 +1,11 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-18 · `3723095`  
-**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). XUsMemories now has a live card on the home page.  
-**Last shipped:** The contact address is now hello@xusall.com everywhere on the site (was a Gmail address), after the memories.xusall.com page and XUsMemories card.  
-**Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check across every site, not just this one (Next moves 3; Adrian thinks none of his sites are showing up properly in Google). XUsPomodoro, XUsCalendar and XUsPhotos are not on the site yet, and the brand line is still said several ways across the family.  
-**Next:** Once memories.xusall.com resolves, submit it in Google Search Console. Fill in PRODUCT_URLS.contacts when XUsContacts is approved, then add the remaining products.
+**Updated:** 2026-09-20 · `1566ba5`  
+**State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). Seven of the eight products now have a card: XUsDemocracy, XUsNotes, XUsPomodoro, XUsCalendar, XUsCurrency, XUsContacts (in development) and XUsMemories.  
+**Last shipped:** XUsCalendar's card, sending people to calendar.xusall.com, plus a docs correction: CLAUDE.md had claimed four cards and an unhosted XUsPomodoro, both long out of date.  
+**Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check across every site, not just this one (Next moves 3; Adrian thinks none of his sites are showing up properly in Google). XUsPhotos has no card, deliberately: it is TestFlight only and has no privacy or support URL yet. The brand line is still said several ways across the family.  
+**Next:** Once memories.xusall.com resolves, submit it in Google Search Console. Fill in PRODUCT_URLS.contacts when XUsContacts is approved. Give XUsPhotos a card when it is available to someone other than Adrian.
 <!-- STATUS:END -->
 
 Read this first. XUsAll is the parent brand and home page for the XUs*
