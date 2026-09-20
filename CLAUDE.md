@@ -26,9 +26,10 @@ that way and for the standard attribution every child product should use.
 This site is the front door to the family: it sends people to the actual
 products and explains, in one place, why they exist and how they're built.
 
-**The family is eight products.** XUsDemocracy, XUsNotes, XUsCurrency and
-XUsMemories are on the site today. XUsPomodoro, XUsCalendar, XUsContacts and
-XUsPhotos are not, and should be added.
+**The family is eight products.** Seven are on the site today:
+XUsDemocracy, XUsNotes, XUsPomodoro, XUsCalendar, XUsCurrency, XUsContacts
+(as an in-development card) and XUsMemories. Only XUsPhotos is missing, and
+it stays off until it is something a visitor can actually get.
 
 ## Where the design comes from
 
@@ -46,7 +47,7 @@ update it, not the handoff, as the system evolves.
 
 | Path | What it is |
 |---|---|
-| `/` | The landing page. Hero, four product cards, philosophy/mission, contact. |
+| `/` | The landing page. Hero, the product cards, philosophy/mission, contact. The card count is derived from `lib/products.js`, not written here. |
 | `/how-we-build` | Transparency page: the AI-assisted workflow used to build every XUsAll product, written for a non-technical reader. |
 | `contacts.xusall.com` | **The official XUsContacts page** (`app/xuscontacts/page.js`), served on its subdomain by a host rewrite in `next.config.mjs`; `/privacy` there is the privacy policy. `www.xusall.com/xuscontacts` redirects to the subdomain. Product pages always live on `<product>.xusall.com` (Adrian). The app's ask-by-text links this address. The App Store link appears once `PRODUCT_URLS.contacts` is filled in. |
 | `memories.xusall.com` | **The official XUsMemories page** (`app/xusmemories/page.js`), same host-rewrite pattern; `/privacy` there serves the privacy policy. `www.xusall.com/xusmemories` redirects to the subdomain. Carries MobileApplication JSON-LD and the Smart App Banner so name searches land here and on the App Store. |
@@ -68,9 +69,11 @@ update it, not the handoff, as the system evolves.
   "N things, so far" line (via `PRODUCT_COUNT_WORD`), and `/llms.txt`. The
   footer and the count used to be hand-written and had already gone stale
   once; do not reintroduce a hardcoded product name, URL, or count anywhere.
-  When XUsPomodoro gets its domain, or XUsCurrency or XUsContacts ship, put
-  the URL in the empty string in `PRODUCT_URLS` and flip that product's
-  `status` to `'live'`. Nothing else needs to change.
+  When a product ships, put its URL in the empty string in `PRODUCT_URLS`
+  and flip that product's `status` to `'live'`. Adding a whole new product is
+  the same one-file change: a `PRODUCT_URLS` entry and an entry in the
+  `PRODUCTS` array. Nothing else needs to change. XUsContacts is the only
+  empty string left.
 - **No em dashes or en dashes anywhere.** Not in copy, comments, docs, or
   commit messages. They read as AI-generated and undermine the site's
   credibility. Rewrite the sentence with a comma, colon, or period instead.
@@ -151,11 +154,11 @@ deployment from this directory.
    (email: hello@xusall.com). Apple removes apps from the EU App Store if
    the declaration is missing, and it will be useful for the company
    generally.
-1. **Product links.** Drop XUsPomodoro's subdomain, XUsCurrency's Play Store
-   URL, and XUsContacts's App Store URL into `lib/products.js` the moment
-   each is available, per the TODOs in that file. XUsPomodoro is built and
-   sitting in `~/projects/xuspomodoro`; it only needs
-   `pomodoro.xusall.com` pointed at a Vercel project.
+1. **Product links.** XUsContacts's App Store URL is the one remaining gap:
+   drop it into `lib/products.js` the moment the app is approved, per the
+   TODO in that file. XUsPhotos gets a card once it is available to someone
+   other than Adrian; it is TestFlight only today, and it has no privacy or
+   support URL to point at yet.
 2. **Sitemap submission.** The domain is already verified in Search Console
    and Bing Webmaster Tools (see the SEO section above), so the only
    remaining step is submitting `https://www.xusall.com/sitemap.xml` to
