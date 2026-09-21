@@ -1,9 +1,9 @@
 # XUsAll project brain
 
 <!-- STATUS:BEGIN -->
-**Updated:** 2026-09-20 · `1566ba5`  
+**Updated:** 2026-09-20 · `27d43fc`  
 **State:** Live at www.xusall.com. The front door for the XUs family. Next.js 14, static, no database. Product pages live on subdomains by host rewrite: contacts.xusall.com (XUsContacts) and memories.xusall.com (XUsMemories, with its App Store link, app JSON-LD and Smart App Banner). Seven of the eight products now have a card: XUsDemocracy, XUsNotes, XUsPomodoro, XUsCalendar, XUsCurrency, XUsContacts (in development) and XUsMemories.  
-**Last shipped:** XUsCalendar's card, sending people to calendar.xusall.com, plus a docs correction: CLAUDE.md had claimed four cards and an unhosted XUsPomodoro, both long out of date.  
+**Last shipped:** XUsCalendar's card, sending people to calendar.xusall.com, then a reorder putting the in-development XUsContacts card last so the odd slot in the two-column grid sits beside it rather than beside the live XUsMemories card. Also a docs correction: CLAUDE.md had claimed four cards and an unhosted XUsPomodoro, both long out of date.  
 **Missing:** A public business phone line (Next moves 0, blocks the Apple EU trader declaration). A search-indexing check across every site, not just this one (Next moves 3; Adrian thinks none of his sites are showing up properly in Google). XUsPhotos has no card, deliberately: it is TestFlight only and has no privacy or support URL yet. The brand line is still said several ways across the family.  
 **Next:** Once memories.xusall.com resolves, submit it in Google Search Console. Fill in PRODUCT_URLS.contacts when XUsContacts is approved. Give XUsPhotos a card when it is available to someone other than Adrian.
 <!-- STATUS:END -->
